@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.box select {
+  background-color: #BB2528;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: white;
+  padding: 5px;
+  max-width: 100%;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+      background-color: #EA4630;
+  }
+}

@@ -1,0 +1,21 @@
+.nav {
+  margin-right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #244c2a;
+  transition: color 0.2s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: #ea4630;
+  }
+}
+
+.selected {
+  font-weight: bold;
+  color: #6e040e;
+}
