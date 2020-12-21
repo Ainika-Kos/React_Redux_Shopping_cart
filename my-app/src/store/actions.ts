@@ -1,5 +1,4 @@
-import { CHANGE_LANGUAGE, ChangeLanguage, Languages } from './types';
-// import { CHANGE_LANGUAGE, ChangeLanguage, Languages, Cart, ADD_TO_CART } from './types';
+import { CHANGE_LANGUAGE, ChangeLanguage, Languages, Cart, ADD_TO_CART, REMOVE_FROM_CART } from './types';
 
 export const changeLanguage = (language: Languages): ChangeLanguage => {
   return {
@@ -8,10 +7,17 @@ export const changeLanguage = (language: Languages): ChangeLanguage => {
   };
 };
 
-// export const AddToCart = (cart: Cart): AddToCart => {
-//   return {
-//     type: ADD_TO_CART,
-//     cart,
-//   };
-// };
+export const AddToCart = (cart: Cart) => {
+  return {
+    type: ADD_TO_CART,
+    cart,
+  };
+};
+
+export const RemoveFromCart = (cart: Cart) => {
+  return {
+    type: REMOVE_FROM_CART,
+    cart,
+  };
+};
 
