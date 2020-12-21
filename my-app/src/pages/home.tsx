@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/types';
 import { translations } from '../locales/translations';
 import { products } from '../locales/products';
 import Card from '../components/Card/Card';
 import './home.scss';
+import { AddToCart, RemoveFromCart } from '../store/actions';
 
 const Home: FC = () => {
   const language = useSelector((state: RootState) => state.language);
-
-  // const [productArray, setProducArray] = useState(products);
+  const dispatch = useDispatch();
 
   return (
     <section>
@@ -23,27 +23,26 @@ const Home: FC = () => {
           <div className="col-xs-10 col-xs-offset-1">
             <div className="product-section">
               {products &&
-                products.map(
-                  ({
-                    id,
-                    image,
-                    productName,
-                    productCategory,
-                    productDescription,
-                    productPrice,
-                  }) => {
-                    return (
-                      <Card
-                        key={id}
-                        image={image}
-                        productName={productName}
-                        productCategory={productCategory}
-                        productDescription={productDescription}
-                        productPrice={productPrice}
-                      />
-                    );
-                  }
-                )}
+                products.map((item) => {
+                  return (
+                    <Card
+                      key={item.id}
+                      image={item.image}
+                      productName={item.productName}
+                      productCategory={item.productCategory}
+                      productDescription={item.productDescription}
+                      productPrice={item.productPrice}
+                      addClickHandler={() => {
+                        const product = item;
+                        dispatch(AddToCart(product));
+                      }}
+                      removeClickHandler={() => {
+                        const product = item;
+                        dispatch(RemoveFromCart(product));
+                      }}
+                    />
+                  );
+                })}
             </div>
           </div>
         </div>

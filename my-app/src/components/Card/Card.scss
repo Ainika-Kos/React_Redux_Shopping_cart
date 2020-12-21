@@ -65,6 +65,33 @@
     color: #BB2528;
 }
 
+.Card__button {
+    padding: 10px;
+    min-width: 70px;
+    max-width: 78px;
+    border-radius: 3px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    background-color: #146b3a;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+
+    &.remove {
+        background-color: #ea4630;
+    }
+
+    &:hover {
+        background-color: #F8B229;
+      }
+}
+
+
 @media only screen and (max-width: 600px) {
 
     .Card__heading {

@@ -10,7 +10,9 @@ export type Cart = {
   productName: string;
   productCategory: string;
   productDescription: string;
-  productPrice: number | undefined;
+  productPrice: number;
+  count: number;
+  sum: number;
 };
 
 interface InitialStore {

@@ -21,6 +21,7 @@ const options = [
 export const Header: FC = () => {
   const dispatch = useDispatch();
   const language = useSelector((state: RootState) => state.language);
+  const cart = useSelector((state: RootState) => state.cart);
 
   return (
     <header className="header">
@@ -61,7 +62,7 @@ export const Header: FC = () => {
                   alt=""
                   width="50"
                 />
-                <span className="cart-amount">0</span>
+                <span className="cart-amount">{cart && cart.length > 0 ? cart.length : 0}</span>
               </div>
             </NavLink>
           </div>

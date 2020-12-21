@@ -7,6 +7,8 @@ export const products = [
     productDescription:
       'Gingerbread foods vary, ranging from a soft, moist loaf cake to something close to a ginger snap.',
     productPrice: 3.69,
+    count: 1,
+    sum: 3.69,
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ export const products = [
     productDescription:
       'Our Christmas Tea™ is an aromatic blend that combines the finest black teas with the traditional flavours of cinnamon and clove.',
     productPrice: 5.99,
+    count: 1,
+    sum: 5.99,
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ export const products = [
     productDescription:
       'Check out our christmas gloves selection for the very best in unique or custom, handmade pieces from our gloves & mittens shops.',
     productPrice: 4.39,
+    count: 1,
+    sum: 4.39,
   },
   {
     id: 4,
@@ -35,6 +41,8 @@ export const products = [
     productDescription:
       'Nothing beats waking up on Christmas morning to smell of fresh coffee brewing. Make the holiday even better by adding some spices and topping of your cup with lots of whipped cream and sprinkles.',
     productPrice: 6.85,
+    count: 1,
+    sum: 6.85
   },
   {
     id: 5,
@@ -44,6 +52,8 @@ export const products = [
     productCategory: 'Accessories',
     productDescription: 'The Best Ugly Christmas Sweaters for Men & Women in 2020!',
     productPrice: 14.99,
+    count: 1,
+    sum: 14.99,
   },
   {
     id: 6,
@@ -54,6 +64,8 @@ export const products = [
     productDescription:
       'Funny Christmas socks are always a great way to take your holiday party outfit to the next level.',
     productPrice: 2.49,
+    count: 1,
+    sum: 2.49,
   },
   
   {
@@ -65,6 +77,8 @@ export const products = [
     productDescription:
       'Mulled wine, or Glogg as it is called in Sweden, is a hot beverage usually made with red wine, along with various mulling spices and raisins.',
     productPrice: 7.25,
+    count: 1,
+    sum: 7.25,
   },
   
   {
@@ -76,5 +90,7 @@ export const products = [
     productDescription:
       'A Christmas cake is a heavy cake containing much dried fruit and usually having a covering of icing. It is made to be eaten at Christmas.',
     productPrice: 3.35,
+    count: 1,
+    sum: 3.35,
   },
 ];

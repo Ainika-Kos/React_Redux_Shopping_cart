@@ -11,6 +11,8 @@ type CardProps = {
   productCategory: string;
   productDescription: string;
   productPrice: number | undefined;
+  addClickHandler: () => void | undefined;
+  removeClickHandler: () => void | undefined;
 };
 
 const Card: FC<CardProps> = ({
@@ -19,6 +21,8 @@ const Card: FC<CardProps> = ({
   productCategory,
   productDescription,
   productPrice,
+  addClickHandler,
+  removeClickHandler
 }) => {
   const language = useSelector((state: RootState) => state.language);
 
@@ -34,7 +38,20 @@ const Card: FC<CardProps> = ({
       </div>
       <div className="Card__purchase-wrapper">
         <p className="Card__price">{productPrice} €</p>
-        <button type="button">{translations[language].buyButton}</button>
+        <button
+          type="button"
+          className="Card__button"
+          onClick={addClickHandler}
+        >
+          {translations[language].buyButton}
+        </button>
+        <button
+          type="button"
+          className="Card__button remove"
+          onClick={removeClickHandler}
+        >
+          {translations[language].removeButton}
+        </button>
       </div>
     </div>
   );
