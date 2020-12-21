@@ -24,14 +24,16 @@ export const Header: FC = () => {
 
   return (
     <header className="header">
-      <div className="container-fluid">
+      <div className="container">
         <div className="row middle-xs">
           <div className="col-xs-12 col-md-3">
-            <img
-              src="https://img.pngio.com/christmas-village-shop-christmas-shop-png-330_124.png"
-              alt=""
-              width="200"
-            />
+            <NavLink exact to="/">
+              <img
+                src="https://img.pngio.com/christmas-village-shop-christmas-shop-png-330_124.png"
+                alt=""
+                width="200"
+              />
+            </NavLink>
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="row center-xs">
@@ -53,11 +55,14 @@ export const Header: FC = () => {
           </div>
           <div className="col-xs-6 col-md-1">
             <NavLink to="/cart">
-              <img
-                src="https://cdn3.iconfinder.com/data/icons/christmas-time-with-happy-man/91/Christmas_Time_13-512.png"
-                alt=""
-                width="50"
-              />
+              <div className="cart-wrapper">
+                <img
+                  src="https://cdn3.iconfinder.com/data/icons/christmas-time-with-happy-man/91/Christmas_Time_13-512.png"
+                  alt=""
+                  width="50"
+                />
+                <span className="cart-amount">0</span>
+              </div>
             </NavLink>
           </div>
         </div>

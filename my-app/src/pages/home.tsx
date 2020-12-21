@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/types';
 import { translations } from '../locales/translations';
@@ -9,7 +9,7 @@ import './home.scss';
 const Home: FC = () => {
   const language = useSelector((state: RootState) => state.language);
 
-  const [productArray, setProducArray] = useState(products);
+  // const [productArray, setProducArray] = useState(products);
 
   return (
     <section>
@@ -22,8 +22,8 @@ const Home: FC = () => {
         <div className="row">
           <div className="col-xs-10 col-xs-offset-1">
             <div className="product-section">
-              {productArray &&
-                productArray.map(
+              {products &&
+                products.map(
                   ({
                     id,
                     image,
