@@ -20,6 +20,7 @@ export const translations = {
     question: 'Jūsu jautājums',
     submit: 'Iesniegt',
     cartTitle: 'Jūsu grozs:',
+    buyButton: 'Ielikt grozā'
   },
   en: {
     navHome: 'Home',
@@ -42,5 +43,6 @@ export const translations = {
     question: 'Your question',
     submit: 'Submit',
     cartTitle: 'Your cart:',
+    buyButton: 'Add to cart'
   },
 };

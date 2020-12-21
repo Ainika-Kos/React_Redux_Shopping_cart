@@ -1,20 +1,20 @@
-import React, { FC } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-import { Nav } from "../Nav/Nav";
-import { Dropdown } from "../Dropdown/Dropdown";
-import { changeLanguage } from "../../store/actions";
-import { Languages, RootState } from "../../store/types";
-import "./Header.scss";
+import React, { FC } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { Nav } from '../Nav/Nav';
+import { Dropdown } from '../Dropdown/Dropdown';
+import { changeLanguage } from '../../store/actions';
+import { Languages, RootState } from '../../store/types';
+import './Header.scss';
 
 const options = [
   {
-    name: "lv",
-    value: "lv",
+    name: 'lv',
+    value: 'lv',
   },
   {
-    name: "en",
-    value: "en",
+    name: 'en',
+    value: 'en',
   },
 ];
 
@@ -33,7 +33,7 @@ export const Header: FC = () => {
               width="200"
             />
           </div>
-          <div className="col-xs-12 col-md-5">
+          <div className="col-xs-12 col-md-6">
             <div className="row center-xs">
               <div className="col-xs-12">
                 <Nav />
@@ -52,12 +52,12 @@ export const Header: FC = () => {
             />
           </div>
           <div className="col-xs-6 col-md-1">
-            <NavLink to="/cart" >
-            <img
-              src="https://cdn3.iconfinder.com/data/icons/christmas-time-with-happy-man/91/Christmas_Time_13-512.png"
-              alt=""
-              width="50"
-            />
+            <NavLink to="/cart">
+              <img
+                src="https://cdn3.iconfinder.com/data/icons/christmas-time-with-happy-man/91/Christmas_Time_13-512.png"
+                alt=""
+                width="50"
+              />
             </NavLink>
           </div>
         </div>

@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import "./Dropdown.scss";
+import React, { FC } from 'react';
+import './Dropdown.scss';
 
 type Props = {
   value: string;

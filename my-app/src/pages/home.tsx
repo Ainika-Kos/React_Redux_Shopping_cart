@@ -4,6 +4,7 @@ import { RootState } from '../store/types';
 import { translations } from '../locales/translations';
 import { products } from '../locales/products';
 import Card from '../components/Card/Card';
+import './home.scss';
 
 const Home: FC = () => {
   const language = useSelector((state: RootState) => state.language);
@@ -19,22 +20,31 @@ const Home: FC = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-xs-12 col-md-3">
-            {productArray &&
-              productArray.map(
-                ({ id, image, productName, productCategory, productDescription, productPrice }) => {
-                  return (
-                    <Card
-                      key={id}
-                      image={image}
-                      productName={productName}
-                      productCategory={productCategory}
-                      productDescription={productDescription}
-                      productPrice={productPrice}
-                    />
-                  );
-                }
-              )}
+          <div className="col-xs-10 col-xs-offset-1">
+            <div className="product-section">
+              {productArray &&
+                productArray.map(
+                  ({
+                    id,
+                    image,
+                    productName,
+                    productCategory,
+                    productDescription,
+                    productPrice,
+                  }) => {
+                    return (
+                      <Card
+                        key={id}
+                        image={image}
+                        productName={productName}
+                        productCategory={productCategory}
+                        productDescription={productDescription}
+                        productPrice={productPrice}
+                      />
+                    );
+                  }
+                )}
+            </div>
           </div>
         </div>
       </div>

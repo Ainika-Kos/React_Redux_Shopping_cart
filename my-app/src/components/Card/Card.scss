@@ -1,9 +1,13 @@
 .Card {
+    max-width: 300px;
     border-radius: 7px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
     padding: 16px;
-    margin-bottom: 16px;
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .Card__image-wrapper {
@@ -22,11 +26,15 @@
     top: 0;
 }
 
+.Card__description-wrapper {
+    margin-bottom: 8px;
+}
+
 .Card__heading {
     color: #165B33;
     font-size: 28px;
     font-weight: 700;
-    margin: 8px 0;
+    margin-bottom: 4px;
 }
 
 .Card__subheading {
@@ -34,7 +42,7 @@
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 400;
-    margin: 8px 0;
+    margin-bottom: 4px;
     letter-spacing: 0.2em;
 }
 
@@ -42,7 +50,7 @@
     color: #000000;
     font-size: 16px;
     text-align: justify;
-    margin: 8px 0;
+    margin-bottom: 8px;
 }
 
 .Card__purchase-wrapper {
@@ -55,4 +63,24 @@
     font-size: 32px;
     font-weight: bold;
     color: #BB2528;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .Card__heading {
+        text-align: center;
+        margin-bottom: 2px;
+    }
+    
+    .Card__subheading {
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+    .Card__purchase-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
