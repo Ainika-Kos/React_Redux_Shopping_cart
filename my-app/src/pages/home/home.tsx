@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Languages, RootStateLanguage } from '../store/languageReducer/types';
-import { translations } from '../locales/translations';
-import { products } from '../locales/products';
-import Card from '../components/Card/Card';
+import { Languages, RootStateLanguage } from '../../store/languageReducer/types';
+import { translations } from '../../locales/translations';
+import { products } from '../../locales/products';
+import Card from '../../components/Card/Card';
 import './home.scss';
-import { AddToCart, RemoveFromCart } from '../store/cartReducer/actions';
+import { AddToCart, RemoveFromCart } from '../../store/cartReducer/actions';
 
 const Home: FC = () => {
   // @ts-ignore

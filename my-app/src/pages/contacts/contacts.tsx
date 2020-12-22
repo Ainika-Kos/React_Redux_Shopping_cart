@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { Languages, RootStateLanguage } from '../store/languageReducer/types';
-import { translations } from '../locales/translations';
+import { Languages, RootStateLanguage } from '../../store/languageReducer/types';
+import { translations } from '../../locales/translations';
 import './contacts.scss';
 
 const Contacts: FC = () => {

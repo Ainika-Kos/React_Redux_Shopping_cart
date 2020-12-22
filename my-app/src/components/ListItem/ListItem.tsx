@@ -32,7 +32,9 @@ const ListItem: FC<ListItemProps> = ({
       <h1 className="ListItem__subheading">{productCategory}</h1>
       <h1 className="ListItem__heading">{productName}</h1>
       <p className="ListItem__price">{productPrice} €</p>
-      <span className="ListItem__count">{count}</span>
+      <div className="ListItem__count-wrapper">
+        <span className="ListItem__count">{count}</span>
+      </div>
       <p className="ListItem__price">{sum.toFixed(2)} €</p>
       <button type="button" onClick={clickHandler}>
         {translations[language].removeButton}

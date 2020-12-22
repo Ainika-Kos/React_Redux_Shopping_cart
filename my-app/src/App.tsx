@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import About from './pages/about';
-import Home from './pages/home';
-import Contacts from './pages/contacts';
-import Cart from './pages/cart';
+import About from './pages/about/about';
+import Home from './pages/home/home';
+import Contacts from './pages/contacts/contacts';
+import Cart from './pages/cart/cart';
 import { Header } from './components/Header/Header';
 
 const App: FC = () => {

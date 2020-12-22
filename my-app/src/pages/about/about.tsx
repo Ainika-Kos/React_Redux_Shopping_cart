@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { Languages, RootStateLanguage } from '../store/languageReducer/types';
-import { translations } from '../locales/translations';
+import { Languages, RootStateLanguage } from '../../store/languageReducer/types';
+import { translations } from '../../locales/translations';
 import './about.scss';
 
 const About: FC = () => {
@@ -16,12 +16,8 @@ const About: FC = () => {
             <h1>{translations[language].aboutTitle}</h1>
             <p>{translations[language].aboutParFirst}</p>
             <p>{translations[language].aboutParSecond}</p>
-            <p>{translations[language].aboutParThird}</p>
-            <p>{translations[language].aboutParFoutrh}</p>
             <p>{translations[language].aboutParFirst}</p>
             <p>{translations[language].aboutParSecond}</p>
-            <p>{translations[language].aboutParThird}</p>
-            <p>{translations[language].aboutParFoutrh}</p>
           </div>
         </div>
       </div>

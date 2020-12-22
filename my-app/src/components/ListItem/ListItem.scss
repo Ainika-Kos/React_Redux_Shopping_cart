@@ -6,12 +6,12 @@
     padding: 16px;
     margin: 16px auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .ListItem__heading {
-    width: 150px;
+    width: 16%;
     color: #165B33;
     font-size: 20px;
     font-weight: 700;
@@ -19,7 +19,7 @@
 }
 
 .ListItem__subheading {
-    width: 150px;
+    width: 16%;
     color: #165B33;
     font-size: 20px;
     text-transform: uppercase;
@@ -28,11 +28,15 @@
 }
 
 .ListItem__price {
-    width: 100px;
+    width: 16%;
     font-size: 20px;
     font-weight: bold;
     color: #BB2528;
     margin: 0 8px;
+}
+
+.ListItem__count-wrapper {
+    width: 16%;
 }
 
 .ListItem__count {
