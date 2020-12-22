@@ -34,7 +34,7 @@ const ListItem: FC<ListItemProps> = ({
       <h1 className="ListItem__heading">{productName}</h1>
       <p className="ListItem__price">{productPrice} €</p>
       <span className="ListItem__count">{count}</span>
-      {/* <p className="ListItem__price">{sum} €</p> */}
+      <p className="ListItem__price">{sum.toFixed(2)} €</p>
       <button type="button" onClick={clickHandler}>
         {translations[language].removeButton}
       </button>

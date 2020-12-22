@@ -25,6 +25,7 @@ export const reducer = (state = initialStore, action: AllActions) => {
       const newState = { ...state };
       const index = newState.cart.indexOf(item);
       newState.cart[index].count += 1;
+      newState.cart[index].sum = newState.cart[index].count * newState.cart[index].productPrice;
       return newState;
     }
     case REMOVE_FROM_CART: {
