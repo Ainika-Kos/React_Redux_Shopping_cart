@@ -1,8 +1,5 @@
-export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
-
-export type Languages = 'lv' | 'en';
 
 export type Cart = {
   id: number;
@@ -15,15 +12,9 @@ export type Cart = {
   sum: number;
 };
 
-interface InitialStore {
-  language: Languages;
+interface InitialStoreCart {
   cart: Cart[];
 }
-
-export type ChangeLanguage = {
-  type: typeof CHANGE_LANGUAGE;
-  language: Languages;
-};
 
 export type AddToCart = {
   type: typeof ADD_TO_CART;
@@ -35,6 +26,6 @@ export type RemoveFromCart = {
   cart: Cart;
 };
 
-export type AllActions = ChangeLanguage | AddToCart | RemoveFromCart;
+export type AllActions = AddToCart | RemoveFromCart;
 
-export interface RootState extends InitialStore {}
+export interface RootStateCart extends InitialStoreCart {}

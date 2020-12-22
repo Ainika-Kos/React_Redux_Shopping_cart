@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store/types';
+import { Languages, RootStateLanguage } from '../../store/languageReducer/types';
 import 'flexboxgrid';
 import './ListItem.scss';
 import { translations } from '../../locales/translations';
@@ -17,16 +17,15 @@ type ListItemProps = {
 };
 
 const ListItem: FC<ListItemProps> = ({
-  image,
   productName,
   productCategory,
-  productDescription,
   productPrice,
   count,
   sum,
   clickHandler,
 }) => {
-  const language = useSelector((state: RootState) => state.language);
+  // @ts-ignore
+  const language: Languages = useSelector((state: RootStateLanguage) => state.languageReducer.language);
 
   return (
     <div className="ListItem">

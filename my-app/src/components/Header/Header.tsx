@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Nav } from '../Nav/Nav';
 import { Dropdown } from '../Dropdown/Dropdown';
-import { changeLanguage } from '../../store/actions';
-import { Languages, RootState } from '../../store/types';
+import { changeLanguage } from '../../store/languageReducer/actions';
+import { Languages, RootStateLanguage } from '../../store/languageReducer/types';
+import { RootStateCart } from '../../store/cartReducer/types';
 import './Header.scss';
 
 const options = [
@@ -20,8 +21,10 @@ const options = [
 
 export const Header: FC = () => {
   const dispatch = useDispatch();
-  const language = useSelector((state: RootState) => state.language);
-  const cart = useSelector((state: RootState) => state.cart);
+  // @ts-ignore
+  const language: Languages = useSelector((state: RootStateLanguage) => state.languageReducer.language);
+  // @ts-ignore
+  const cart : Cart[] = useSelector((state: RootStateCart) => state.cartReducer.cart);
 
   return (
     <header className="header">

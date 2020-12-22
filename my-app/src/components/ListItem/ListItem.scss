@@ -11,7 +11,7 @@
 }
 
 .ListItem__heading {
-    width: 200px;
+    width: 150px;
     color: #165B33;
     font-size: 20px;
     font-weight: 700;
@@ -19,7 +19,7 @@
 }
 
 .ListItem__subheading {
-    width: 200px;
+    width: 150px;
     color: #165B33;
     font-size: 20px;
     text-transform: uppercase;
@@ -28,6 +28,7 @@
 }
 
 .ListItem__price {
+    width: 100px;
     font-size: 20px;
     font-weight: bold;
     color: #BB2528;

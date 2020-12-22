@@ -1,17 +1,11 @@
-import { RootState, AllActions, CHANGE_LANGUAGE, ADD_TO_CART, REMOVE_FROM_CART, Cart } from './types';
+import { RootStateCart, AllActions, ADD_TO_CART, REMOVE_FROM_CART, Cart } from './types';
 
-const initialStore: RootState = {
-  language: 'en',
+const initialCart: RootStateCart = {
   cart: [],
 };
 
-export const reducer = (state = initialStore, action: AllActions) => {
+export const cartReducer = (state = initialCart, action: AllActions) => {
   switch (action.type) {
-    case CHANGE_LANGUAGE: {
-      return {
-        language: action.language,
-      };
-    }
       
     case ADD_TO_CART: {
       const newCart: Cart = action.cart;
@@ -25,7 +19,8 @@ export const reducer = (state = initialStore, action: AllActions) => {
       const newState = { ...state };
       const index = newState.cart.indexOf(item);
       newState.cart[index].count += 1;
-      newState.cart[index].sum = newState.cart[index].count * newState.cart[index].productPrice;
+      newState.cart[index].sum =
+        newState.cart[index].count * newState.cart[index].productPrice;
       return newState;
     }
     case REMOVE_FROM_CART: {

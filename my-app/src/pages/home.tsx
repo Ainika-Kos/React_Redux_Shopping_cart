@@ -1,15 +1,18 @@
 import React, { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../store/types';
+import { Languages, RootStateLanguage } from '../store/languageReducer/types';
 import { translations } from '../locales/translations';
 import { products } from '../locales/products';
 import Card from '../components/Card/Card';
 import './home.scss';
-import { AddToCart, RemoveFromCart } from '../store/actions';
+import { AddToCart, RemoveFromCart } from '../store/cartReducer/actions';
 
 const Home: FC = () => {
-  const language = useSelector((state: RootState) => state.language);
+  // @ts-ignore
+  const language: Languages = useSelector((state: RootStateLanguage) => state.languageReducer.language);
+
   const dispatch = useDispatch();
+  
 
   return (
     <section>

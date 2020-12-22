@@ -1,13 +1,16 @@
 import React, { FC } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store/types';
+import { Languages, RootStateLanguage } from '../store/languageReducer/types';
+import { Cart, RootStateCart } from '../store/cartReducer/types';
 import { translations } from '../locales/translations';
-import { RemoveFromCart } from '../store/actions';
+import { RemoveFromCart } from '../store/cartReducer/actions';
 import ListItem from '../components/ListItem/ListItem';
 
-const Cart: FC = () => {
-  const language = useSelector((state: RootState) => state.language);
-  const cart = useSelector((state: RootState) => state.cart);
+const CartList: FC = () => {
+  // @ts-ignore
+  const language: Languages = useSelector((state: RootStateLanguage) => state.languageReducer.language);
+  // @ts-ignore
+  const cart : Cart[] = useSelector((state: RootStateCart) => state.cartReducer.cart);
   const dispatch = useDispatch();
 
   return (
@@ -48,4 +51,4 @@ const Cart: FC = () => {
   );
 };
 
-export default Cart;
+export default CartList;

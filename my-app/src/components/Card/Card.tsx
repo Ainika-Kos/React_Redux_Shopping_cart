@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store/types';
+import { Languages, RootStateLanguage } from '../../store/languageReducer/types';
 import 'flexboxgrid';
 import './Card.scss';
 import { translations } from '../../locales/translations';
@@ -24,7 +24,8 @@ const Card: FC<CardProps> = ({
   addClickHandler,
   removeClickHandler
 }) => {
-  const language = useSelector((state: RootState) => state.language);
+  // @ts-ignore
+  const language: Languages = useSelector((state: RootStateLanguage) => state.languageReducer.language);
 
   return (
     <div className="Card">
