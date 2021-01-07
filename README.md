@@ -1,3 +1,2 @@
-# Shopping_cart_redux
-You can try the shopping cart here:
+# React Christmas shopping cart - under construction
 
